@@ -1,6 +1,6 @@
-name: Heron Data Suite Feature Request
+name: Feature Request
 description: File a feature request.
-title: "[Heron UI Feature]: "
+title: "[Heron Clone Feature]: "
 labels: ["feature", "new"]
 body:
   - type: markdown

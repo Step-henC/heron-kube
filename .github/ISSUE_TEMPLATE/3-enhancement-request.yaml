@@ -1,6 +1,6 @@
-name: Heron Data Suite Enhancement Request
+name: Enhancement Request
 description: File an enhancement request.
-title: "[Heron UI Enhancement]: "
+title: "[Heron Clone Enhancement]: "
 labels: ["enhancement", "improve"]
 body:
   - type: markdown
