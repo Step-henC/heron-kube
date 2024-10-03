@@ -3,6 +3,12 @@ WORKDIR '/app'
 COPY package.json .
 RUN npm install
 
+ENV REACT_APP_SERVICE_ID changeme
+ENV REACT_APP_TEMPLATE_ID changeme
+ENV REACT_APP_PUBLIC_KEY changeme
+ENV REACT_APP_PROTOCOL_LINK https://www.protocols.io/view/heron-data-suite-biomedical-quantitative-analysis-8epv5xwj5g1b/v1
+ENV REACT_APP_GLYCO_API http://localhost:8000
+
 COPY . .
 RUN npm run build
 #output of build is in .../app/build
