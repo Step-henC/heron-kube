@@ -15,7 +15,7 @@ RUN npm install
 # but keep it just in case
 COPY  --chown=node:node ./ ./
 
-CMD ["npm", "start"]
+#CMD ["npm", "start"]
 
 # Docker will build Dockerfile.dev
 # by specifying "docker build -t heron-redux/latest -f Dockerfile.dev ."

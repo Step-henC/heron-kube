@@ -1,7 +1,8 @@
-FROM node:18-alpine as builder
+FROM node:16-alpine AS builder
 WORKDIR '/app'
 COPY package.json .
 RUN npm install
+
 COPY . .
 RUN npm run build
 #output of build is in .../app/build
@@ -21,9 +22,13 @@ EXPOSE 3000
 #remember our nginx listens to port 3000
 
 # copy our default config over to nginx image
-COPY ./nginx/default.conf /etc/nginx/conf.default.conf
+COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=builder /app/build /usr/share/nginx/html
+
+
+COPY --from=builder /app/build/ /usr/share/nginx/html
+
+EXPOSE 80
 
 # remember nginx uses port 80
 # so in port mapping -p <my port>:80
