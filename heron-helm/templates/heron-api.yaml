@@ -21,7 +21,7 @@ spec:
                     - containerPort: {{ .Values.service.port }}
                   readinessProbe:
                     httpGet:
-                        path: /api/glyco/excel
+                        path: /api/api/glyco/excel
                         port: {{ .Values.service.port }}
                     initialDelaySeconds: 50
                     periodSeconds: 10
@@ -29,7 +29,7 @@ spec:
                     failureThreshold: 3
                   livenessProbe:
                     httpGet:
-                        path: /api/glyco/excel
+                        path: /api/api/glyco/excel
                         port: {{ .Values.service.port }}
                     initialDelaySeconds: 50
                     periodSeconds: 10
